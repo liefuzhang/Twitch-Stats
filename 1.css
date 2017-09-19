@@ -1,3 +1,55 @@
 body{
     background-color: #ecf0e7;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
 }
+
+#container {
+    background-color: #e1e1e6;    
+    width: 700px;
+    height: 300px;
+    display: inline-block;
+}
+
+#summary {
+    background-color: #5c5457;
+    color: #e1e1e6;
+    padding: 20px;
+}
+
+#summary span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+ul#streams {
+    list-style: none;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    color:#e1e1e6;
+}
+
+ul#streams li {
+    background-color: #4a5e82;
+    margin: 2px 0;
+    position: relative;
+}
+
+    ul#streams li img {
+        height: 40px;
+        width: auto;
+        vertical-align: middle;
+        border: 2px solid #e1e1e6;
+        margin: 5px 20px;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+    
+    ul#streams li .channel-name {
+        width: 30%;
+        display: inline-block;
+    }
+
+    ul#streams li .status {
+    }
