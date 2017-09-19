@@ -1,4 +1,20 @@
 $(document).ready(() => {
+    $('#buttons div').click(function(e){
+        var $this =$(this);
+        $('#buttons div').removeClass('active');
+        $this.addClass('active');
+        var id = $this.attr('id');
+        if(id ==='all'){
+            $('.offline').show();
+            $('.online').show();
+        } else if (id === 'online') {
+            $('.offline').hide();
+            $('.online').show();
+        } else if (id === 'offline') {
+            $('.offline').show();
+            $('.online').hide();
+        }
+    });
     buildStreamStats();
 });
 
@@ -24,7 +40,7 @@ function buildStreamStats() {
                 var className = status === 'offline' ? 'offline' : 'online';
                 $('#streams').append(`<li class="${className}">
                     <img src="${logoUrl}">
-                    <span class="channel-name">${title}</span>
+                    <span class="channel-name"><a target="_blank" href="https://www.twitch.tv/${title}">${title}</a></span>
                     <span class="status"><i>${status}</i></span></li>`); 
             });
         });

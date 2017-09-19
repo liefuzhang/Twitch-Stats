@@ -7,7 +7,6 @@ body{
 #container {
     background-color: #e1e1e6;    
     width: 700px;
-    height: 300px;
     display: inline-block;
 }
 
@@ -15,11 +14,72 @@ body{
     background-color: #5c5457;
     color: #e1e1e6;
     padding: 20px;
+    position: relative;
+    text-align: left;
 }
 
 #summary span {
     font-size: 30px;
     font-weight: bold;
+    margin-left: 50px;
+}
+
+#summary #buttons{
+    position: absolute;
+    right: 20px;
+    top: 0;
+    bottom:0;
+    height: 80%;
+    margin: auto;
+    vertical-align: middle;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#buttons div{
+    margin: 2px;
+    position: relative;
+    text-align: right;
+    background-color: #e1e1e6;
+    flex: 0;
+    left: 55px;
+    cursor: pointer;
+    transition: 0.8s ease;
+}
+
+#buttons div:hover, #buttons div.active{
+    left: 0;
+}
+
+#buttons div span{
+    margin-left: 11px;
+    font-size: 12px;
+    color: #5c5457;
+}
+
+#buttons div::before{
+    content: "";
+    height: 8px;
+    width:8px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    border: 1px solid #e1e1e6;
+    border-radius: 4px;
+}
+
+#all::before {
+    background-color: #5c5457;    
+}
+#online::before {
+    background-color: #b8cca6;    
+}
+#offline::before {
+    background-color: #4a5e82;    
 }
 
 ul#streams {
@@ -51,5 +111,7 @@ ul#streams li {
         display: inline-block;
     }
 
-    ul#streams li .status {
+    footer{
+        height: 20px;
+        background-color: #5c5457; 
     }
